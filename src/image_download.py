@@ -1,7 +1,7 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
-# Last modified: 2017-07-18 20:33:54
+# Last modified: 2017-07-18 21:55:10
 
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
@@ -18,6 +18,8 @@ class image_download(object):
 
     def __init__(self, directory="~/Picture/image_downloader", max_process=4):
         self.directory = os.path.expanduser(directory)
+        if not os.path.exists(self.directory):
+            os.makedirs(self.directory)
         self.max_process = max_process
 
     def get_images(self, urls: dict)->None:
@@ -58,11 +60,11 @@ class image_download(object):
 
 
 @click.command()
-@click.option('--DIR', default=None, help="Directory where to save images.")
+@click.option('--directory', default='', help="Directory where to save images.")
 @click.argument('web')
-def main(DIR, web):
+def main(directory, web):
 
     downloader = image_download()
-    if directory is not None:
-        downloader.directory = DIR
+    if directory is not '':
+        downloader.directory = directory
     downloader.download(web)
