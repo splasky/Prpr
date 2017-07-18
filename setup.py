@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
-# Last modified: 2017-07-18 20:53:57
+# Last modified: 2017-07-19 01:10:23
 
 from setuptools import setup, find_packages
 
@@ -16,7 +16,7 @@ setup(
     keywords=('image', 'download'),
     description='download image in web page',
     url='',
-    license='GPL3',
+    license='MIT',
     author='splasky',
     author_email='henrychung860326@gmail.com',
     packages=find_packages(),
