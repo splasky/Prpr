@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
-# Last modified: 2017-07-18 20:42:46
+# Last modified: 2017-07-18 20:53:57
 
 from setuptools import setup, find_packages
 
@@ -20,7 +20,7 @@ setup(
     author='splasky',
     author_email='henrychung860326@gmail.com',
     packages=find_packages(),
-    package_dir={'src': 'image_download'},
+    #  package_dir={'src','image_download'},
     zip_safe=True,
     entry_points={
         'console_scripts': [
