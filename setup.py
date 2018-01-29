@@ -1,14 +1,9 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
-# Last modified: 2017-07-19 01:10:23
+# Last modified: 2018-01-29 22:25:41
 
 from setuptools import setup, find_packages
-
-
-install_requires = []
-for line in open('requirements.txt', 'r'):
-    install_requires.append(line.strip())
 
 setup(
     name='Prpr',
@@ -27,5 +22,4 @@ setup(
             'Prpr=src.image_download:main'
         ]
     },
-    install_requires=install_requires
 )
