@@ -7,10 +7,10 @@ name = "pypi"
 
 [packages]
 
-click = "==6.7"
-requests = "==2.18.1"
-"beautifulsoup4" = "==4.6.0"
-lxml = "==3.8.0"
+click = "*"
+requests = "*"
+"beautifulsoup4" = "*"
+lxml = "*"
 
 
 [dev-packages]
